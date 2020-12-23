@@ -33,7 +33,7 @@ export default class SignIn extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <FormInput type='email' name='email' value={this.state.email} handleChange={this.handleChange} label='Email' required />
-                    <FormInput type='password' name='password' value={this.state.password} handleChange={this.handleChange} label='Password' required />
+                    <FormInput type='password' name='password' value={this.state.password} handleChange={this.handleChange} label='P assword' required />
 
                     <input type="submit" value="Submit Form"/>
                 </form>
