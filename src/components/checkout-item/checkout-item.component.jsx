@@ -13,7 +13,7 @@ const CheckOutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
             <img src={imageUrl} alt="item"/>
         </CheckoutImageContainer>
         <CheckoutItemName>{name}</CheckoutItemName>
-        <QuantityContainer className="quantity">
+        <QuantityContainer>
             <div className="arrow" onClick={() => removeItem(cartItem)}>&#10094;</div>
             <span className="value">{quantity}</span>
             <div className="arrow" onClick={() => addItem(cartItem)}>&#10095;</div>

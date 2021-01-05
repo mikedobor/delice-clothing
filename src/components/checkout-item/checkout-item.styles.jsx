@@ -35,6 +35,6 @@ export const QuantityContainer = styled(CheckoutItemName)`
 `;
 
 export const RemoveButtonContainer = styled.div`
-  padding-left: 12px;
+  padding-left: 90px;
   cursor: pointer;
 `;
