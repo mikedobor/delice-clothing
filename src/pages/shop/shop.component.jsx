@@ -1,13 +1,11 @@
 import React, { Component }  from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect'
 
 import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
 import CollectionPageContainer from '../collection/collection.container';
 
-import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
-import { selectIsCollectionsLoaded } from '../../redux/shop/shop.selectors'
+import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 
 
 class ShopPage extends Component {
@@ -24,7 +22,7 @@ class ShopPage extends Component {
         return(
             <div className='shop-page'>
                 <Route exact path={`${match.path}`} component={CollectionsOverviewContainer} />
-                <Route path={`${match.path}/:collectionId`} component={CollectionPageContainer} {...this.props} /> } />
+                <Route path={`${match.path}/:collectionId`} component={CollectionPageContainer} {...this.props} />
             </div>
         );
     }
@@ -32,7 +30,7 @@ class ShopPage extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    fetchCollectionsStartAsync: () => dispatch(fetchCollectionsStartAsync())
+    fetchCollectionsStartAsync: () => dispatch(fetchCollectionsStart())
 })
 
 export default connect(null, mapDispatchToProps)(ShopPage);
